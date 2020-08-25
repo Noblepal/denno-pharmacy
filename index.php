@@ -1,7 +1,7 @@
 <?php
 	//Start session
 session_start();
-	
+
 	//Unset the variables stored in session
 unset($_SESSION['SESS_MEMBER_ID']);
 unset($_SESSION['SESS_FIRST_NAME']);
@@ -10,6 +10,7 @@ unset($_SESSION['SESS_LAST_NAME']);
 <html>
 
 <head>
+
 	<title>Pharmacy</title>
 	<link rel="shortcut icon" href="main/images/pos.jpg">
 	<link href="main/css/bootstrap.css" rel="stylesheet">
@@ -29,17 +30,17 @@ unset($_SESSION['SESS_LAST_NAME']);
 	</div>
 	<div id="login">
 		<?php
-	if (isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) > 0) {
-		foreach ($_SESSION['ERRMSG_ARR'] as $msg) {
-			echo '<div style="color: red; text-align: center;">', $msg, '</div><br>';
-		}
-		unset($_SESSION['ERRMSG_ARR']);
-	}
-	?>
+			if (isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) > 0) {
+				foreach ($_SESSION['ERRMSG_ARR'] as $msg) {
+					echo '<div style="color: red; text-align: center;">', $msg, '</div><br>';
+				}
+				unset($_SESSION['ERRMSG_ARR']);
+			}
+		?>
 		<form action="login.php" method="post">
 
-			<font style=" font:bold 44px 'Aleo'; color:#0084ff">
-				<center>Pharmacy Module</center>
+			<font style=" font:bold 14px 'Aleo'; color:#0084ff">
+				<center>A WEB-BASED PHARMACY MANAGEMENT SYSTEM FOR MURANG'A COUNTY HOSPITAL</center>
 			</font>
 			<br>
 
@@ -52,8 +53,11 @@ unset($_SESSION['SESS_LAST_NAME']);
 			</div>
 			<div class="qwe">
 				<button class="btn btn-large btn-primary btn-block pull-right" href="dashboard.html" type="submit"><i class="icon-signin icon-large"></i>
-					Login</button>Powered By Caters. All Rights Reserved.
+					Login
+				</button>
+				Powered By Caters. All Rights Reserved.
 			</div>
+
 		</form>
 	</div>
 	</div>

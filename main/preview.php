@@ -22,17 +22,17 @@ Sales Receipt
 <script src="src/facebox.js" type="text/javascript"></script>
 <script language="javascript">
 function Clickheretoprint()
-{ 
-	var disp_setting="toolbar=yes,location=no,directories=yes,menubar=yes,"; 
-		disp_setting+="scrollbars=yes,width=800, height=400, left=100, top=25"; 
-	var content_vlue = document.getElementById("content").innerHTML; 
+{
+	var disp_setting="toolbar=yes,location=no,directories=yes,menubar=yes,";
+		disp_setting+="scrollbars=yes,width=800, height=400, left=100, top=25";
+	var content_vlue = document.getElementById("content").innerHTML;
 
-	var docprint=window.open("","",disp_setting); 
-	docprint.document.open(); 
-	docprint.document.write('</head><body onLoad="self.print()" style="width: 800px; font-size: 13px; font-family: arial;">');          
-	docprint.document.write(content_vlue); 
-	docprint.document.close(); 
-	docprint.focus(); 
+	var docprint=window.open("","",disp_setting);
+	docprint.document.open();
+	docprint.document.write('</head><body onLoad="self.print()" style="width: 800px; font-size: 13px; font-family: arial;">');
+	docprint.document.write(content_vlue);
+	docprint.document.close();
+	docprint.focus();
 }
 </script>
 <?php
@@ -77,7 +77,7 @@ $finalcode = 'RS-' . createRandomPassword();
 <body>
 
 <?php include('navfixed.php'); ?>
-		
+
 <div class="container">
 <a href="sales.php?id=cash&invoice=<?php echo $finalcode ?>"><button class="btn btn-default"><i class="icon-arrow-left"></i> Back to Sales</button></a>
 <div class="pull-right" style="margin-right:100px;">
@@ -88,8 +88,8 @@ $finalcode = 'RS-' . createRandomPassword();
 <div style="width: 100%; height: 190px;" >
 <div style="width: 900px; float: left;">
 <center><div style="font:bold 25px 'Aleo';">Sales Receipt</div>
-caters pharmacy	<br>
-Caters Team ltd	<br>
+
+ MURANG'A COUNTY HOSPITAL PHARMACY	<br> 
 </center>
 <div>
 
@@ -116,7 +116,7 @@ Caters Team ltd	<br>
 			<td><?php echo $date ?></td>
 		</tr>
 	</table>
-	
+
 	</div>
 	<div class="clearfix"></div>
 	</div>
@@ -132,7 +132,7 @@ Caters Team ltd	<br>
 			</tr>
 		</thead>
 		<tbody>
-			
+
 			<?php
 			$id = $_GET['invoice'];
 			$result = $link->prepare("SELECT * FROM sales_order WHERE invoice= :userid");
@@ -150,7 +150,7 @@ Caters Team ltd	<br>
 			echo formatMoney($ppp, true);
 			?>
 				</td>
-				
+
 				<td>
 				<?php
 			$dfdf = $row['amount'];
@@ -162,7 +162,7 @@ Caters Team ltd	<br>
 
 		}
 		?>
-			
+
 				<tr>
 					<td colspan="4" style=" text-align:right;"><strong style="font-size: 12px;">Total: &nbsp;</strong></td>
 					<td colspan="4"><strong style="font-size: 12px;">
@@ -230,16 +230,14 @@ Caters Team ltd	<br>
 				?>
 					</strong></td>
 				</tr>
-			
+
 		</tbody>
 	</table>
-	
+
 	</div>
 	</div>
 	</div>
 	</div>
-	
+
 </div>
 </div>
-
-
